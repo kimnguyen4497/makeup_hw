@@ -1,3 +1,4 @@
+from datetime import datetime
 class GoVote():
 
     def __init__(self, votes):
@@ -58,10 +59,10 @@ class GoVote():
         '''
 
 		# insert code here
-        dict empty = dict()
+        empty dict = dict()
         for z in votes:
-            dict_empty[z] = []
-        return dict_empty 
+            empty_dict[z] = []
+        return empty_dict 
 
 
     def fill_votes(self, votes, votes_dictionary):
@@ -119,6 +120,10 @@ class GoVote():
 
 
 # write a decorator called debbuger that will output the current time the function was executed (using datetime library) and the name of the function executed using __name__ inside function (variable is defined by default by python).
+def my_debugger(func):
+	def wrapper():
+	print ("Current time: {}".format(datetime.now()))
+	return wrapper 
 
 
 
